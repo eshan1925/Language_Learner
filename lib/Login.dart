@@ -94,11 +94,7 @@ class _LoginState extends State<Login> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                SizedBox(
-                  height: 150,
-                ),
                 Image(image:AssetImage("images/app.png"),height: 180,width: 300,),
-                SizedBox(height:20),
                 Container(
                   child: Form(
                     key: _formKey,
@@ -138,7 +134,7 @@ class _LoginState extends State<Login> {
                           ),
                         ),
                         SizedBox(height
-                        :40),
+                        :30),
                         // ignore: deprecated_member_use
                         RaisedButton(
                           padding: EdgeInsets.fromLTRB(70, 10,70, 10),
@@ -157,9 +153,7 @@ class _LoginState extends State<Login> {
                     ),
                   ),
                 ),
-
-                SizedBox(height: 15,),
-
+                SizedBox(height: 10,),
                 GestureDetector(
                   child: Text('Create an Account?',style: TextStyle(fontWeight:FontWeight.bold),),
                   onTap: navigateToSignUp,

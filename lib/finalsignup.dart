@@ -80,16 +80,12 @@ class _FinalSignupState extends State<FinalSignup> {
                 end: Alignment.bottomRight,
                 colors: [Color(0xfffca080),Colors.white, Color(0xfffca080)])),
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(50, 100, 50, 120),
+          padding: const EdgeInsets.fromLTRB(50, 80, 50, 120),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              SizedBox(
-                height: 150,
-              ),
               Image(image:AssetImage("images/app.png"),height: 180,width: 300,),
-              SizedBox(height:20),
               Container(
                 child: Form(
                   key: _formKey,
@@ -144,7 +140,7 @@ class _FinalSignupState extends State<FinalSignup> {
                         ),
                       ),
                       SizedBox(height
-                          :40),
+                          :19),
                       // ignore: deprecated_member_use
                       RaisedButton(
                           padding: EdgeInsets.fromLTRB(70, 10,70, 10),

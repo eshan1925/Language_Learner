@@ -48,6 +48,10 @@ class _StartState extends State<Start> {
   navigateToSignUp() async{
     Navigator.pushReplacementNamed(context, FinalSignup.id);
   }
+
+  holaNavigator() async{
+    Navigator.pushReplacementNamed(context, FinalSignup.id);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,9 +69,9 @@ class _StartState extends State<Start> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              // SizedBox(
-              //   height: 50,
-              // ),
+              SizedBox(
+                height: 200,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -106,9 +110,10 @@ class _StartState extends State<Start> {
                           "Sign-Up",
                           style: TextStyle(fontSize: 25),
                         ),
-                        onPressed:
-                          navigateToSignUp,
-                    ),
+                        onPressed:() {
+                          Navigator.pushReplacementNamed(context,
+                              FinalSignup.id);
+                        }),
                   ),
                 ],),
               SizedBox(height: 25,),

@@ -78,7 +78,7 @@ class _ContactState extends State<Contact> {
               ),
               SizedBox(height:25),
               new ElevatedButton(
-                onPressed: () => launch("www.laguageocity.com"),
+                onPressed: () => launch("htps://www.laguageocity.com"),
                 child: ListTile(
                   tileColor: Colors.white,
                   leading: Icon(

@@ -85,9 +85,6 @@ class _SignUpState extends State<SignUp> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                SizedBox(
-                  height: 150,
-                ),
                 Container(
                   child: Form(
                     key: _formKey,

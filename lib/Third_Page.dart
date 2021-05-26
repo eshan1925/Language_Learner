@@ -105,7 +105,7 @@ class _DashBoardState extends State<DashBoard> {
               ),
               Center(
                 child: Text(
-                  'Completed - 40%  of English',
+                  'Completed - 40% of हिंदी',
                   style: TextStyle(color: Colors.black87, fontSize: 25),
                 ),
               ),
