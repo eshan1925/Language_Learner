@@ -88,6 +88,8 @@ class _FinalSignupState extends State<FinalSignup> {
               SizedBox(
                 height: 150,
               ),
+              Image(image:AssetImage("images/app.png"),height: 180,width: 300,),
+              SizedBox(height:20),
               Container(
                 child: Form(
                   key: _formKey,

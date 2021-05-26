@@ -62,67 +62,60 @@ class _DashBoardState extends State<DashBoard> {
           padding: const EdgeInsets.fromLTRB(15.0, 0, 0, 0),
           child: Container(
             child: ListView(children: <Widget>[
-              SizedBox(
-                height: 100,
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Column(
-                    children: [
-                      Text(
-                        'Namaste  ${user.displayName}🙏,',
-                        style: TextStyle(
-                            fontSize: 25,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        'Learn your favourite language here',
-                        style: TextStyle(fontSize: 15, color: Colors.black87),
-                      )
-                    ],
-                  ),
-                  Container(
-                    padding: EdgeInsets.fromLTRB(0, 0, 3.4, 0),
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, Profile.id);
-                      },
-                      child: Hero(
-                        tag: 'profile_image',
-                        child: CircleAvatar(
-                          backgroundColor: Colors.blue,
-                          radius: 32,
-                          child: CircleAvatar(
-                              backgroundImage: AssetImage("images/P1.png"),
-                              radius: 29),
-                        ),
-                      ),
+              SizedBox(height: 15),
+              Image(image:AssetImage("images/app.png"),height: 180,width: 300,),
+              Container(
+                padding: EdgeInsets.fromLTRB(0, 0, 3.4, 0),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, Profile.id);
+                  },
+                  child: Hero(
+                    tag: 'profile_image',
+                    child: CircleAvatar(
+                      backgroundColor: Colors.blue,
+                      radius: 40,
+                      child: CircleAvatar(
+                          backgroundImage: AssetImage("images/P1.png"),
+                          radius: 38),
                     ),
                   ),
-                ],
+                ),
               ),
               SizedBox(
-                height: 10,
+                height: 25,
               ),
-              Container(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
-                alignment: Alignment.centerLeft,
+              Center(
                 child: Text(
-                  'Completed',
-                  style: TextStyle(color: Colors.grey.shade500, fontSize: 25),
+                  'Namaste  ${user.displayName}🙏,',
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                 ),
               ),
-              Container(
-                alignment: Alignment.centerLeft,
+              Center(
                 child: Text(
-                  '40%  of English',
-                  style: TextStyle(color: Colors.black, fontSize: 15),
+                  'Learn your favourite language here',
+                  style: TextStyle(fontSize: 15, color: Colors.black87),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(
+                height: 2,
+              ),
+              Center(
+                child: Text(
+                  'Completed - 40%  of English',
+                  style: TextStyle(color: Colors.black87, fontSize: 25),
+                ),
+              ),
+              // Center(
+              //   child: Text(
+              //     '40%  of English',
+              //     style: TextStyle(color: Colors.black, fontSize: 15),
+              //   ),
+              // ),
+              SizedBox(height: 25),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[

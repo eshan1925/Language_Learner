@@ -6,6 +6,8 @@ import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:language/Second_page.dart';
+import 'package:language/Third_Page.dart';
 import 'package:language/finalsignup.dart';
 
 
@@ -33,7 +35,7 @@ class _StartState extends State<Start> {
         final UserCredential user =
         await _auth.signInWithCredential(credential);
 
-        await Navigator.pushReplacementNamed(context, "/");
+        await Navigator.pushReplacementNamed(context, Course.id);
 
         return user;
       } else {
@@ -43,7 +45,7 @@ class _StartState extends State<Start> {
       throw StateError('Sign in Aborted');
   }
 
-  navigateToRegister() async {
+  navigateToSignUp() async{
     Navigator.pushReplacementNamed(context, FinalSignup.id);
   }
   @override
@@ -58,14 +60,14 @@ class _StartState extends State<Start> {
       ),
       child:SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(80, 100, 80, 120),
+          padding: const EdgeInsets.fromLTRB(80, 40, 80, 120),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              SizedBox(
-                height: 150,
-              ),
+              // SizedBox(
+              //   height: 50,
+              // ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -84,7 +86,7 @@ class _StartState extends State<Start> {
                           style: TextStyle(fontSize: 25),
                         ),
                         onPressed: (){
-                          Navigator.pushNamed(context, Login.id);
+                          Navigator.pushReplacementNamed(context, Login.id);
                           showSpinner=true;
                         }
                     ),
@@ -105,7 +107,7 @@ class _StartState extends State<Start> {
                           style: TextStyle(fontSize: 25),
                         ),
                         onPressed:
-                          navigateToRegister,
+                          navigateToSignUp,
                     ),
                   ),
                 ],),

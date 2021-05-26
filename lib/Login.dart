@@ -85,7 +85,7 @@ class _LoginState extends State<Login> {
             gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [Colors.white, Color(0xfffca080)])),
+                colors: [ Color(0xfffca080),Colors.white, Color(0xfffca080)])),
         child: ModalProgressHUD(
           inAsyncCall: showSpinner,
           child: Padding(
@@ -97,6 +97,8 @@ class _LoginState extends State<Login> {
                 SizedBox(
                   height: 150,
                 ),
+                Image(image:AssetImage("images/app.png"),height: 180,width: 300,),
+                SizedBox(height:20),
                 Container(
                   child: Form(
                     key: _formKey,
